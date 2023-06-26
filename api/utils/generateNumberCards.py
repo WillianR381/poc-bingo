@@ -65,7 +65,6 @@ def formatCardsResponse(drawn_numbers_sorted):
     numbers = drawn_numbers_sorted.split(',')
     for number in numbers:
         number = int(number)
-        print(number)
         if  number <=15 :
             formatted_drawn_numbers['b'].append(number)
         elif number <= 30:

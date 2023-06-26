@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "17e06ddf-29a3-4e4c-b069-ce97b54c26b1",
+		"name": "Bingo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bingo",
+			"item": [
+				{
+					"name": "Insere numero",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\" : \"13\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/bingo/insere-numero",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bingo",
+								"insere-numero"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nova Rodada",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/bingo/nova-rodada",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bingo",
+								"nova-rodada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insere numero aleatorio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/bingo/insere-numero-aleatorio",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bingo",
+								"insere-numero-aleatorio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Card",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\" : \"5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/cartela/cria-nova",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cartela",
+								"cria-nova"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Cria Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Carlos\",\n    \"email\": \"a2@a.com\",\n    \"password\" :\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/usuario/criar",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"usuario",
+								"criar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:5000",
+			"type": "default"
+		}
+	]
+}
